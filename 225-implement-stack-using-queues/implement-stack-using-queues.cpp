@@ -5,7 +5,7 @@ private:
 
 public:
     MyStack() {
-        // Constructor initializes an empty stack
+        // Constructor 
     }
     
     void push(int x) {
@@ -13,7 +13,7 @@ public:
     }
     
     int pop() {
-        int topElement = st.back(); // Get the last element
+        int topElement = st.back(); 
         st.pop_back(); // Remove it
         return topElement;
     }
