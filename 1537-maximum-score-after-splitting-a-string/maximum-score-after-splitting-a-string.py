@@ -4,7 +4,7 @@ class Solution:
         
         
         for i in range(len(s)-1):
-            left=right=''
+            
             left_substr=s[:i+1]
             right_substr=s[i+1:]
             left_count=left_substr.count('0')
