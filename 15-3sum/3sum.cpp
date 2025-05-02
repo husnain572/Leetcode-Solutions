@@ -29,3 +29,7 @@ public:
      return res;
     }
 };
+
+
+// TC : O(nlogn+n^2)
+// SC :(uniqueTriplets)
