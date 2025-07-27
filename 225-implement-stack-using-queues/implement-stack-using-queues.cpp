@@ -1,28 +1,43 @@
-
 class MyStack {
-private:
-    std::deque<int> st; // Use deque to implement stack
-
 public:
+    queue<int> q1;
+    queue<int> q2;
     MyStack() {
-        // Constructor 
+        
     }
     
     void push(int x) {
-        st.push_back(x); 
+        while(!q1.empty()){
+            q2.push(q1.front());
+            q1.pop();
+        }
+        q1.push(x);
+        while(!q2.empty()){
+            q1.push(q2.front());
+            q2.pop();
+        }
     }
     
     int pop() {
-        int topElement = st.back(); 
-        st.pop_back(); // Remove it
-        return topElement;
+        int ans=q1.front();
+        q1.pop();
+        return ans;        
     }
     
     int top() {
-        return st.back(); // Return the last element
+     return q1.front();   
     }
     
     bool empty() {
-        return st.empty(); // Check if the deque is empty
+        return q1.empty();
     }
 };
+
+/**
+ * Your MyStack object will be instantiated and called as such:
+ * MyStack* obj = new MyStack();
+ * obj->push(x);
+ * int param_2 = obj->pop();
+ * int param_3 = obj->top();
+ * bool param_4 = obj->empty();
+ */
