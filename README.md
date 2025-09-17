@@ -4,7 +4,7 @@ This repository contains my solutions to **LeetCode problems**, automatically pu
 
 ---
 
-## 📂 Structure
+## Structure
 
 - Solutions are organized by problem title or category.  
 - Languages: Mostly **C++**, sometimes **Python**.  
