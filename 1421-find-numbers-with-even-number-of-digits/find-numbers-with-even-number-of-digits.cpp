@@ -1,13 +1,12 @@
-#include <string>
 class Solution {
 public:
     int findNumbers(vector<int>& nums) {
-        int count=0;
+        int even_count=0;
         for(int i=0;i<nums.size();i++){
-            if((to_string(nums[i]).length())%2==0){
-                count++;
+            if(to_string(nums[i]).length()%2==0){
+                even_count+=1;
             }
         }
-        return count;
+        return even_count;
     }
 };
