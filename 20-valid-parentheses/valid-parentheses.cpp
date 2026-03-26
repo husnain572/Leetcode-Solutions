@@ -1,10 +1,10 @@
 class Solution {
 public:
     bool isValid(string s) {
-        stack<char>st;
+        stack<char> st;
         int i=0;
         while(i<s.length()){
-            if(s[i]=='(' ||s[i]=='[' ||s[i]=='{'){
+            if(s[i]=='(' || s[i]=='{' || s[i]=='['){
                 st.push(s[i]);
             }
             else{
@@ -14,11 +14,9 @@ public:
                 (s[i]=='}' && st.top()=='{')){
                     st.pop();
                 }
-                else {
-                    return false;
-                }
+                else return false;
             }
-        i++;
+            i++;
         }
         return st.empty();
     }
