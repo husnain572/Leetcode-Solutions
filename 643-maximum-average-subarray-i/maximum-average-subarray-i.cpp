@@ -10,9 +10,9 @@ public:
             if (j - i + 1 < k) {
                 j++;
             } else if (j - i + 1 == k) {
-                double avg = double(sum) / k;
+               double avg = (double)sum / k;
                 ans = max(avg, ans);
-                sum -= nums[i];
+                sum-=nums[i];
                 i++;
                 j++;
             }
