@@ -1,12 +1,12 @@
 class Solution {
 public:
     bool checkIfPangram(string sentence) {
-      set<char> s;
-      for(auto ch:sentence){
-        if (isalpha(ch)){
-            s.insert(tolower(ch));
+        set<char> st;
+        for(auto ch:sentence){
+            if(isalpha(ch)){
+                st.insert(ch);
+            }
         }
-      }
-      return s.size() == 26;
+        return st.size()==26;
     }
 };
