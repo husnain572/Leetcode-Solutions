@@ -9,6 +9,7 @@ public:
             }
             else{
                 count=0;
+                continue;
             }
             maxVal=max(count, maxVal);        
             }
