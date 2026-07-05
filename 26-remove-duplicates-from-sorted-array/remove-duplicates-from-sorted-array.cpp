@@ -5,7 +5,7 @@ public:
         int count=1;
         for(int j=1;j<nums.size();j++){
             if(nums[i]!=nums[j]){
-                count+=1;
+                count++;
                 i++;
                 nums[i]=nums[j];
             }
